@@ -4,7 +4,7 @@ const messageModel = mongoose.Schema({
     message:{type:String,trim:true},
     chat:{type:mongoose.Schema.Types.ObjectId,ref:'Chat'}
 },{
-    timeStamp:trusted
+    timeStamp:true
 });
 const Message = mongoose.model('Message',messageModel);
 module.exports = Message;

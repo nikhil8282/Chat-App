@@ -1,18 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-import Left from './components/leftSection/Left.jsx'
-import Right from './components/rightSection/Right'
+import SignUp from './pages/signup/SignUp';
+import Login from './pages/login/Login';
+import {createBrowserRouter,Navigate,RouterProvider} from 'react-router-dom'
+import { useContext, useState } from 'react';
+import Home from './pages/home/Home';
+import { userContext } from './context/userContext';
 function App() {
-  return (
-    <div className="App">
-      <div className='left'>
-        <Left/>
-      </div>
-      <div className='right'>
-        <Right/>
-      </div>
-    </div>
-  );
+  const {user}=useContext(userContext);
+  const ProctectRoute =({children})=>{
+    if(user)return children;
+    return <Navigate to="/login"/>
+  }
+  const router = createBrowserRouter([
+    {
+      path:'/',element:<ProctectRoute><Home/></ProctectRoute>
+    },
+    {
+      path:'/signup',element:user?<Navigate to="/"/>:<SignUp/>
+    },
+    {
+      path:'/login',element:user?<Navigate to="/"/>:<Login/>
+    }
+  ])
+  return <RouterProvider  router={router }/>;
 }
 
 export default App;

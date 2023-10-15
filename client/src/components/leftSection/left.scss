@@ -1,0 +1,13 @@
+.LeftBar{
+    /* background: yellowgreen; */
+    // position: relative;
+    .user-lists{   
+        position: sticky;
+        top: 105px ;
+        height: calc(100vh - 105px);
+        overflow: scroll;
+       
+        &::-webkit-scrollbar{display: none;}
+        
+    }
+}

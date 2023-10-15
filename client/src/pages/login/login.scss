@@ -1,0 +1,107 @@
+$mycolor: rgb(0 0 0 / 76%);
+
+.login {
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.856);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // margin: 0px;
+  .card {
+    display: flex;
+    width: 50%;
+    background-color: #ffff;
+    border-radius: 10px;
+    min-height: 500px;
+    overflow: hidden;
+    // flex-direction: row-reverse;
+    -webkit-box-shadow: 0px 0px 57px -7px rgba(0,240,64,0.6);
+    -moz-box-shadow: 0px 0px 57px -7px rgba(0,240,64,0.6);
+    box-shadow: 0px 0px 57px -7px rgba(0, 0, 0, 0.6);;
+
+    .left {
+      flex: 1;
+      display: flex;
+      background: linear-gradient(rgba(35, 255, 6, 0.267), rgba(94, 255, 1, 0.158)),
+      url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRfuKS9muqJtDaMH9vTd6T88Q59MPNd-G2_w&usqp=CAU)
+        center;
+      background-size: cover;
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px;
+
+      color: #ffffff;
+
+      // border: 1px solid rgb(2, 2, 2);
+      h1 {
+        font-size: 100px;
+        line-height: 100px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      span {
+        font-size: 12px;
+      }
+
+      button {
+        width: 50%;
+        padding: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        color: $mycolor;
+      }
+      button:hover{
+        background: #cfc9c9;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 50px;
+      justify-content: center;
+
+      // border: 1px solid black;
+      h1 {
+        color: $mycolor;
+        // font-size: 50px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        input {
+          border: none;
+          border-bottom: 1px solid grey;
+          padding: 20px 10px;
+          padding: 10px;
+          width: 300px;
+        }
+
+        button {
+          padding: 10px;
+          width: 50%;
+          color: white;
+          font-weight: bold;
+          border: none;
+          background-color: $mycolor;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+        button:hover{
+          background-color: #141414;
+        }
+      }
+    }
+  }
+}

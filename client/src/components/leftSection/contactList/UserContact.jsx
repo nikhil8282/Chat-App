@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import profile from '../../../images/group-photo.jpg'
 import logo from "../../../images/user-logo.webp"
 
 import './userContact.scss'
-const UserContact = ({name,profilePic}) => {
+import { userContext } from '../../../context/userContext'
+const UserContact = ({u,currentUser}) => {
+  // console.log(currentUser);
+  const {setSelectChat}=useContext(userContext);
+
+  const {name,profilePic}=currentUser;
   return (
-    <div className='contact-box'>
+    <div className='contact-box' onClick={()=>{setSelectChat(u)}}>
         <span className="users-profile">
         <img src={profilePic?profilePic:logo}/>
         </span>

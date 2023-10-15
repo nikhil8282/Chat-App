@@ -1,5 +1,8 @@
 .l-nav-bar{
     background: burlywood;
+    z-index: 999;
+    position: sticky;
+    top: 0;
     
     /* height: 110px; */
     /* width: 50px; */
@@ -63,13 +66,41 @@ input{
     border: none;
     background: transparent;
 }
+.close-icon{
+    display: inline-block;
+    position: absolute;
+    right: 80px;
+    top: 14px;
+    cursor: pointer;
+}
+
 input:focus,
 input:active {
- box-shadow: none ;
- -moz-box-shadow: none ;
- -webkit-box-shadow: none ;
- outline: none;
+    box-shadow: none ;
+    -moz-box-shadow: none ;
+    -webkit-box-shadow: none ;
+    outline: none;
 }
 .filter-icon{
     margin-left: 10px;
+    cursor: pointer;
+}
+
+.users-lists{
+    background-color: aquamarine;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    /* padding: 0px 40px; */
+    flex-direction: column;
+}
+.user{
+    /* margin: 10px 0px; */
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    /* justify-content: space-between; */
+    /* height: 500px; */
 }
