@@ -1,0 +1,35 @@
+.users-list {
+    display: flex;
+    flex-direction: column;
+    // position: absolute;
+    background: #f0f2f5;
+    border: 0.2px solid rgb(209, 208, 208);
+
+
+    // align-items: center;
+    width: 100%;
+
+    justify-content: center;
+
+    .user {
+        border-top: 0.2px solid rgba(218, 218, 218, 0.911);
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        .profile {
+            img {
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+    }
+}
+
+.selected {
+    background: rgb(194, 194, 245);
+}

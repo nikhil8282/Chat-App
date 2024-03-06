@@ -14,7 +14,9 @@ const protectMiddleware =async(req,res,next)=>{
         next();
     }
     catch(err){
-        return res.status(500).json(err);
+        console.log(err);
+        // throw new Error("user is expired")
+        return res.status(401).json(err);
     }
 }
 module.exports=protectMiddleware;

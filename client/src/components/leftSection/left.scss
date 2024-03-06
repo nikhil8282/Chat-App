@@ -1,5 +1,5 @@
 .LeftBar{
-    /* background: yellowgreen; */
+     background: #b4bbe0; 
     // position: relative;
     .user-lists{   
         position: sticky;
@@ -8,6 +8,8 @@
         overflow: scroll;
        
         &::-webkit-scrollbar{display: none;}
-        
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
     }
 }

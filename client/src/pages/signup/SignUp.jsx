@@ -114,6 +114,7 @@ export default function SignUp() {
               onChange={handleChange}
               name="confirmPassword"
               placeholder="confirm password"
+              required
             />
            {
             err &&

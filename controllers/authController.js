@@ -45,7 +45,6 @@ async function loginHandler(req, res) {
   }
 };
 const getUser = async (req, res) => {
-  console.log(req.query);
 
   const fil = req.query.search
     ?{
@@ -56,7 +55,7 @@ const getUser = async (req, res) => {
         ]
       }:{};
       try{
-        const users = await User.find(fil).find({_id:{$ne:req.user._id}});
+        const users = await User.find(fil).find({_id:{$ne:req.user._id}}).select("-password");
         return res.status(200).json(users);
       } catch (error) {
         res.status(400).json(error);

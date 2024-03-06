@@ -19,8 +19,30 @@ app.use(cors({
 env.config();
 connectDb();
 
-
 app.use('/api/auth',authRoutes);
 app.use('/api/chat',chatRoutes);
 app.use('/api/message',messageRoutes);
-app.listen(8000,()=>{console.log(`server is running on port ${process.env.PORT}`);})
+
+const server = app.listen(8000,()=>{console.log(`server is running on port ${process.env.PORT}`);})
+const io=require('socket.io')(server,{
+    pingTimeout:60000,
+    cors:{
+        origin:"http://localhost:3000",
+    },
+});
+
+
+io.on("connection",(socket)=>{
+    socket.on('setUp',(id)=>{
+        socket.join(id);
+        socket.emit('connected');
+    })
+    socket.on('joinRoom',(id)=>{
+        socket.join(id);
+        console.log("user join room "+id);
+    })
+    socket.on('newMessage',(data)=>{
+        let {chat}
+    })
+    // console.log("socket connected"+socket.id);
+})

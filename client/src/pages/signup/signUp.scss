@@ -16,15 +16,16 @@ $mycolor: rgb(0 0 0 / 76%);
     min-height: 500px;
     overflow: hidden;
     flex-direction: row-reverse;
-    -webkit-box-shadow: 0px 0px 57px -7px rgba(0,240,64,0.6);
-    -moz-box-shadow: 0px 0px 57px -7px rgba(0,240,64,0.6);
+    -webkit-box-shadow: 0px 0px 57px -7px rgba(149, 0, 235, 0.6);
+    -moz-box-shadow: 0px 0px 57px -7px rgba(132, 0, 240, 0.6);
     box-shadow: 0px 0px 57px -7px rgba(0, 0, 0, 0.6);;
+
 
     .right {
       flex: 1;
       display: flex;
-      background: linear-gradient(rgba(35, 255, 6, 0.267), rgba(94, 255, 1, 0.158)),
-        url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRfuKS9muqJtDaMH9vTd6T88Q59MPNd-G2_w&usqp=CAU)
+      background: linear-gradient(rgba(147, 83, 231, 0.61), rgba(134, 57, 175, 0.418)),
+      url(https://images.unsplash.com/photo-1552068751-34cb5cf055b3?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
           center;
       background-size: cover;
       flex-direction: column;

@@ -2,9 +2,9 @@ const Chat = require("../models/chatModel");
 const Users = require("../models/usersModel");
 
 const getChat = async (req, res) => {
-  const { userId } = req.body;
+const { userId } = req.body;
   if (!userId) {
-    console.log(req.body);
+    // console.log(req.body);
     return res.status(400).json("user is not found");
   }
 
@@ -29,13 +29,12 @@ const getChat = async (req, res) => {
       users: [req.user._id, userId],
     };
     const store = await Chat.create(chatData);
-
-    return res.status(200).json(store);
+    return getChat(req,res);
   } catch (err) {
     res.status(500).json(err);
   }
 };
-const getAllChats = async (req, res) => {
+const getAllChats = async (req, res) => { 
   try {
     // console.log(req.user);
     var Allchats = await Chat.find({
@@ -50,6 +49,7 @@ const getAllChats = async (req, res) => {
     });
     return res.status(200).json(Allchats);
   } catch (error) {
+    console.log(error);
     return res.status(500).json(error);
   }
 };

@@ -6,6 +6,7 @@ import Home from './pages/home/Home';
 import { userContext } from './context/userContext';
 function App() {
   const {user}=useContext(userContext);
+  // console.log(user);
   const ProctectRoute =({children})=>{
     if(user)return children;
     return <Navigate to="/login"/>

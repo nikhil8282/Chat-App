@@ -1,4 +1,4 @@
-.right-bar {
+
     .chat-box {
         width: 100%;
 
@@ -17,15 +17,21 @@
                 display: none;
             }
 
-            background: white;
+            background: url("https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            
+            background-position:center;
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+
 
             .message {
                 width: 400px;
-                color: white;
+                color: rgb(10, 10, 10);
                 position: relative;
+                
 
                 .box {
-                    background: #000;
                     padding: 5px;
                     display: inline-block;
                     display: flex;
@@ -43,45 +49,48 @@
                         margin-top: 2px;
                     }
                 }
-
+                
                 .box-left {
                     border-radius: 0px 5px 5px 5px;
-
+                    background: #8deee9;
+                    
                 }
-
+                
                 .box-right {
                     border-radius: 5px 0px 5px 5px;
-
+                    background: #fcabbb;
+                    
                 }
             }
-
+            
             .message-right {
                 align-self: flex-end;
             }
-
+            
             .message-left {
                 align-self: flex-start;
-
+                
             }
-
+            
             .message.arrow-left:after {
                 content: " ";
                 position: absolute;
                 left: -10px;
                 top: 0px;
-                border-right: 15px solid black;
+                border-right: 15px solid #8deee9;
                 border-left: none;
                 border-bottom: 15px solid transparent;
                 border-radius: 2px 0px 8px 0px;
             }
-
+            
+            
             .message.arrow-right:after {
                 content: " ";
                 position: absolute;
                 right: -10px;
                 top: 0px;
                 border-right: none;
-                border-left: 15px solid black;
+                border-left: 15px solid #fcabbb;
                 border-bottom: 15px solid transparent;
                 border-radius: 2px 0px 8px 0px;
             }
@@ -89,7 +98,7 @@
 
         .message-input-section {
             z-index: 999;
-            background: #f0f2f5;
+            background: #5f6cb3;
             // background: yellow;
             position: sticky;
             bottom: 0;
@@ -103,6 +112,7 @@
                 border: 1px solid rgb(201, 201, 201);
                 border-radius: 5px;
                 font-size: 18px;
+                background: #bbbfd8;
             }
 
             .send-button {
@@ -115,4 +125,3 @@
             }
         }
     }
-}

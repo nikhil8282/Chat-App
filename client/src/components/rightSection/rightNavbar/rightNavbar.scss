@@ -3,7 +3,7 @@
      display: flex;
     height: 55px;
     padding: 5px 10px;
-    background: #f0f2f5;
+    background: #5f6cb3;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -36,7 +36,7 @@
             
             .time{
                 font-size: 14px; 
-                color: #707070;          
+                color: #0f0f0f;          
             }
             
         }
@@ -44,6 +44,9 @@
     // }
     // .right{
         .three-dots{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
             // flex:1;
         }
     // }
